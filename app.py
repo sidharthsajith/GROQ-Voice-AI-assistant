@@ -47,7 +47,7 @@ def main():
             try:
                 transcription = recognizer.recognize_google(audio)
                 if transcription.lower() == "arjuna":
-                    filename: "input.wav"
+                    filename = "input.wav"
                     print("You May Speak!")
                     with sr.Microphone() as source:
                         recognizer = sr.Recognizer()
@@ -61,7 +61,7 @@ def main():
                         print (f"You: {text}")
 
                         response = generate_response(text)
-                        print = (f"ArjunaAI: {response}")
+                        print(f"ArjunaAI: {response}")
                         speak_text(response)
 
             except Exception as e:
