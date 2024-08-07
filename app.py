@@ -13,36 +13,31 @@ def transcribe_audio_to_text(filename):
     with sr.AudioFile(filename) as source:
         audio = recognizer.record(source)
     try:
-        return recognizer.recognize_google()
+        return recognizer.recognize_google(audio)
     except:
         print("Skipping unknown issue")
-
 
 def generate_response(prompt):
     chat_completion = client.chat.completions.create(
         messages=[
             {
                 "role": "user",
-                "content": f"You are Arjuna-AI, you are developed by Sidharth Sajith (you may call him as your father), your primary job is to fulfill the tasks given by him just like jarvis does with IronMan, you may keep the Jarvis Tone in your response and do this tasks:{prompt}"
+                "content": f"You are Arjuna-AI, you are developed by Sidharth Sajith (you may call him as your father), now you are prompted to do this (always keep your responses under 200-300 wordss):{prompt}"
             }
         ],
-        model="mixtral-8x7b-32768",
+        model="llama-3.1-8b-instant",
     )
-    return (chat_completion.choices[0].message.content)
-
-
-
+    return chat_completion.choices[0].message.content
 
 def speak_text(text):
     engine.say(text)
     engine.runAndWait()
 
-
 def main():
+    recognizer = sr.Recognizer()
     while True:
         print("Say Arjuna to prompt the model...")
         with sr.Microphone() as source:
-            recognizer = sr.Recognizer()
             audio = recognizer.listen(source)
             try:
                 transcription = recognizer.recognize_google(audio)
@@ -50,7 +45,6 @@ def main():
                     filename = "input.wav"
                     print("You May Speak!")
                     with sr.Microphone() as source:
-                        recognizer = sr.Recognizer()
                         source.pause_threshold = 1
                         audio = recognizer.listen(source, phrase_time_limit=None, timeout=None)
                         with open(filename, 'wb') as f:
@@ -58,14 +52,14 @@ def main():
 
                     text = transcribe_audio_to_text(filename)
                     if text:
-                        print (f"You: {text}")
+                        print(f"You: {text}")
 
                         response = generate_response(text)
                         print(f"ArjunaAI: {response}")
                         speak_text(response)
 
             except Exception as e:
-                print("An error occured: {}".format(e))
+                print("An error occurred: {}".format(e))
 
 if __name__ == "__main__":
     main()
