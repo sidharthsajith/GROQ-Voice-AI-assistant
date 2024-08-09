@@ -2,7 +2,7 @@
 Install the required packages using pip:
 pip install pyttsx3 groq speech_recognition transformers
 Replace YOUR_GROQ_API with your actual Groq API key.
-Refer to [Requirements]() for the complete setup.
+Refer to [Requirements](https://github.com/sidharthsajith/GROQ-Voice-AI-assistant/tree/main#requirements) for the complete setup.
 ### How to make it work:
 Run the script using Python: `python app.py`
 Speak the wake word to prompt the model.
@@ -16,14 +16,14 @@ Chatbot: This script can be used as a chatbot that responds to user input, lever
 Voice-to-Text: This script can be used to transcribe audio to text, utilizing its speech recognition capabilities.
 ## Theory:
 Speech Recognition: The script employs the speech_recognition library to recognize spoken audio, utilizing its ability to transcribe audio to text.
-Natural Language Processing ** (NLP) **: The script utilizes the Groq AI model to generate a response based on the input text, leveraging its NLP capabilities.
+Natural Language Processing **(NLP)**: The script utilizes the Groq AI model to generate a response based on the input text, leveraging its NLP capabilities.
 Text-to-Speech: The script employs the pyttsx3 library to convert text to speech, utilizing its TTS functionality.
 ### Code Explanation:
 The transcribe_audio_to_text function utilizes the speech_recognition library to transcribe audio to text, leveraging its speech recognition capabilities.
 The generate_response function utilizes the Groq AI model to generate a response based on the input text, leveraging its NLP capabilities.
-The speak_text function utilizes the pyttsx3 library to convert text to speech, utilizing its ** TTS functionality **.
+The speak_text function utilizes the pyttsx3 library to convert text to speech, utilizing its **TTS functionality**.
 The main function is the entry point of the script, utilizing a while loop to continuously listen for audio input and respond accordingly.
-### Voice Virtual Assistant
+## Voice Virtual Assistant
 This is a basic virtual assistant that responds to voice commands using the Groq AI model, leveraging its NLP capabilities to understand and respond to user input.
 
 ### Usage:
