@@ -1,7 +1,7 @@
 ### Setup:
 1) Install the required packages using pip:
 `pip install pyttsx3 groq speech_recognition transformers`
-2) Replace YOUR_GROQ_API with your actual Groq API key.
+2) Replace `YOUR_GROQ_API` with your actual Groq API key.
 3) Refer to [Requirements](https://github.com/sidharthsajith/GROQ-Voice-AI-assistant/tree/main#requirements) for the complete setup.
 ### How to make it work:
 Run the script using Python: `python app.py`
