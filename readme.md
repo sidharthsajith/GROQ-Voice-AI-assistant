@@ -7,7 +7,7 @@ pip install pyttsx3 groq speech_recognition
 ```
 
 2. Replace `YOUR_GROQ_API` with your actual Groq API key.
-3. And refer to [Requirements](###Requirements:) for the complete setup.
+3. And refer to [Requirements](### Requirements:) for the complete setup.
 
 ## **How to make it work:**
 
@@ -43,7 +43,7 @@ This is a basic virtual assistant that responds to voice commands using the Groq
 
 **Usage:**
 
-1. Run the script using Python: `python main.py`
+1. Run the script using Python: `python app.py`
 2. Speak the wake word to setup to prompt the model.
 3. Speak your message after the prompt.
 4. The script will transcribe your audio to text using Google Speech Recognition.
@@ -55,8 +55,8 @@ This is a basic virtual assistant that responds to voice commands using the Groq
 - Python 3.6 or later
 - pip install pyttsx3 groq speech_recognition
 - Replace `YOUR_GROQ_API` with your actual Groq API key.
-- Setup the context and the bot character using in the code where I have mentioned `Replace_with_the_character_and_context_you_want_for_your_assistant!`
-- And setup your Bot Wakeword by replacing `REPLACE_WITH_YOUR_WAKEWORD`
+- Setup the context and the bot character using in the code where I have mentioned `Replace_with_the_character_and_context_you_want_for_your_assistant!` in the code.
+- And setup your Bot Wakeword by replacing `REPLACE_WITH_YOUR_WAKEWORD` in the code.
 - You may choose the model you like other the mentioned `llama-3.1-8b-instant` by referring to the available models at [Groq](https://console.groq.com/docs/models) and replace the model by the model id mentioned in the website.
 
 **License:**
