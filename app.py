@@ -4,7 +4,7 @@ import speech_recognition as sr
 import time
 
 client = Groq(
-    api_key="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"
+    api_key="YOUR_GROQ_API"
 )
 engine = pyttsx3.init()
 
@@ -21,8 +21,12 @@ def generate_response(prompt):
     chat_completion = client.chat.completions.create(
         messages=[
             {
+                "role": "system",
+                "content": "Replace with the character and context you want for your assistant!"
+            }
+            {
                 "role": "user",
-                "content": f"You are Arjuna-AI, you are developed by Sidharth Sajith (you may call him as your father), now you are prompted to do this (always keep your responses under 200-300 wordss):{prompt}"
+                "content": prompt
             }
         ],
         model="llama-3.1-8b-instant",
