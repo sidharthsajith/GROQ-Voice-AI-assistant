@@ -7,7 +7,7 @@ pip install pyttsx3 groq speech_recognition
 ```
 
 2. Replace `YOUR_GROQ_API` with your actual Groq API key.
-3. And refer to [Requirements](### Requirements:) for the complete setup.
+3. And refer to [Requirements](###Requirements:) for the complete setup.
 
 ## **How to make it work:**
 
