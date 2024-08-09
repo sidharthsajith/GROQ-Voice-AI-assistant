@@ -22,7 +22,7 @@ def generate_response(prompt):
         messages=[
             {
                 "role": "system",
-                "content": "Replace with the character and context you want for your assistant!"
+                "content": "Replace_with_the_character_and_context_you_want_for_your_assistant!"
             }
             {
                 "role": "user",
@@ -45,7 +45,7 @@ def main():
             audio = recognizer.listen(source)
             try:
                 transcription = recognizer.recognize_google(audio)
-                if transcription.lower() == "arjuna":
+                if transcription.lower() == "REPLACE_WITH_YOUR_WAKEWORD":
                     filename = "input.wav"
                     print("You May Speak!")
                     with sr.Microphone() as source:
