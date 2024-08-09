@@ -40,7 +40,7 @@ def speak_text(text):
 def main():
     recognizer = sr.Recognizer()
     while True:
-        print("Say Arjuna to prompt the model...")
+        print("Say The Wakeword to prompt the model...")
         with sr.Microphone() as source:
             audio = recognizer.listen(source)
             try:
@@ -59,7 +59,7 @@ def main():
                         print(f"You: {text}")
 
                         response = generate_response(text)
-                        print(f"ArjunaAI: {response}")
+                        print(f"Bot: {response}")
                         speak_text(response)
 
             except Exception as e:
