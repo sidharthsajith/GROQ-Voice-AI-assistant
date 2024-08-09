@@ -50,7 +50,7 @@ This is a basic virtual assistant that responds to voice commands using the Groq
 5. The script will then generate a response using the Groq AI model.
 6. The response will be spoken out loud using pyttsx3.
 
-### **Requirements:**
+### Requirements:
 
 - Python 3.6 or later
 - pip install pyttsx3 groq speech_recognition
